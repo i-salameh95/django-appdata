@@ -1,12 +1,12 @@
 import json
-
+import django
 from django import forms
 from django.db.models import TextField
 from django.utils.encoding import smart_str
-django.utils.encoding.smart_text = smart_str
 from .containers import AppDataContainerFactory
 from .registry import app_registry
 
+django.utils.encoding.smart_text = smart_str
 
 class AppDataDescriptor:
     """Ensure the user attribute is accessible via the profile"""
